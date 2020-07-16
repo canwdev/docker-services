@@ -1,4 +1,4 @@
-docker run -d --name=gitea \
+docker run -d --restart=always --name=gitea \
 --link mysql:db \
 -p 10022:22 -p 10080:3000 \
 -v $PWD/gitea:/data \
