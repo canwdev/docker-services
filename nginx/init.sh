@@ -1,7 +1,9 @@
 # https://hub.docker.com/_/nginx
-# -v $PWD/nginx.conf:/etc/nginx/nginx.conf:ro \
-# -p 87:80 \
-docker run -d --restart=always --name some-nginx \
---net=host \
--v $PWD/www:/usr/share/nginx/html:ro \
+# --net=host \
+
+docker run -d --restart=always --name nginx \
+-p 80:80 \
+-v $PWD/www:/www:ro \
+-v $PWD/default.conf:/etc/nginx/conf.d/default.conf:ro \
 nginx
+
