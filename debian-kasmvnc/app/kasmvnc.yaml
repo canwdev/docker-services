@@ -1,0 +1,9 @@
+# https://www.kasmweb.com/kasmvnc/docs/latest/configuration.html#default-configurations
+logging:
+  log_writer_name: all
+  log_dest: logfile
+  level: 100
+network:
+  # 防止 stun 查询公网 ip，提升启动速度
+  udp:
+    public_ip: 127.0.0.1
