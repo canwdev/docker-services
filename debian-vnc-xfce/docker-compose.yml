@@ -10,4 +10,4 @@ services:
     volumes:
       - ./shared:/root/shared
     environment:
-      VNC_PASSWORD: Abcd.1234
+      VNC_PASSWORD: Demo.password
