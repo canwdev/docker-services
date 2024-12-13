@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  debian_vx:
+    image: debian-vnc-xfce
+    container_name: debian-vx
+    restart: always
+    ports:
+      - "5901:5901"
+    volumes:
+      - ./shared:/root/shared
+    environment:
+      VNC_PASSWORD: Abcd.1234
