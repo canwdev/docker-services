@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  debian_tvx:
+    image: debian-turbo-vnc-xfce
+    container_name: debian-tvx
+    restart: always
+    ports:
+      - "5901:5901"
+    volumes:
+      - ./shared:/root/shared
+    environment:
+      VNC_PASSWORD: Demo.password
